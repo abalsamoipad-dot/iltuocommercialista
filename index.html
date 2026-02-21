@@ -1,0 +1,841 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Il Tuo Commercialista | Studio Associato Marotta & Balsamo</title>
+    <meta name="description" content="Studio Associato di Consulenza Fiscale, Tributaria e Aziendale. Dott. Marotta e Dott. Balsamo - Agrigento e Caltanissetta. Servizi completi per imprese e professionisti.">
+    <meta name="keywords" content="commercialista, consulenza fiscale, tributaria, bilanci, contabilità, Agrigento, Caltanissetta, Sicilia">
+
+    <!-- Preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+
+    <!-- GSAP for animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollToPlugin.min.js"></script>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="preloader-inner">
+            <div class="preloader-line"></div>
+            <div class="preloader-text">
+                <span class="preloader-brand">ITC</span>
+                <span class="preloader-sub">Il Tuo Commercialista</span>
+            </div>
+            <div class="preloader-counter">0%</div>
+        </div>
+    </div>
+
+    <!-- Custom Cursor -->
+    <div class="cursor" id="cursor"></div>
+    <div class="cursor-follower" id="cursor-follower"></div>
+
+    <!-- Navigation -->
+    <nav class="nav" id="nav">
+        <div class="nav-inner">
+            <a href="#hero" class="nav-logo">
+                <span class="logo-mark">ITC</span>
+                <span class="logo-text">Il Tuo Commercialista</span>
+            </a>
+            <div class="nav-links" id="nav-links">
+                <a href="#chi-siamo" class="nav-link" data-text="Chi Siamo">Chi Siamo</a>
+                <a href="#servizi" class="nav-link" data-text="Servizi">Servizi</a>
+                <a href="#professionisti" class="nav-link" data-text="Professionisti">Professionisti</a>
+                <a href="#novita" class="nav-link" data-text="Novit&agrave;">Novit&agrave;</a>
+                <a href="#contatti" class="nav-link" data-text="Contatti">Contatti</a>
+            </div>
+            <a href="#contatti" class="nav-cta">Richiedi Consulenza</a>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobile-menu">
+        <div class="mobile-menu-inner">
+            <a href="#chi-siamo" class="mobile-link">Chi Siamo</a>
+            <a href="#servizi" class="mobile-link">Servizi</a>
+            <a href="#professionisti" class="mobile-link">Professionisti</a>
+            <a href="#novita" class="mobile-link">Novit&agrave;</a>
+            <a href="#contatti" class="mobile-link">Contatti</a>
+            <a href="#contatti" class="mobile-cta">Richiedi Consulenza</a>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-bg">
+            <div class="hero-gradient"></div>
+            <div class="hero-grid-overlay"></div>
+            <div class="hero-particles" id="hero-particles"></div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-badge">
+                <span class="badge-dot"></span>
+                Studio Associato di Consulenza Professionale
+            </div>
+            <h1 class="hero-title">
+                <span class="hero-line">
+                    <span class="hero-word">La Tua</span>
+                </span>
+                <span class="hero-line">
+                    <span class="hero-word accent">Guida Fiscale</span>
+                </span>
+                <span class="hero-line">
+                    <span class="hero-word">di Fiducia</span>
+                </span>
+            </h1>
+            <p class="hero-subtitle">
+                Consulenza fiscale, tributaria e aziendale di eccellenza.<br>
+                Due sedi in Sicilia al servizio di imprese e professionisti.
+            </p>
+            <div class="hero-actions">
+                <a href="#servizi" class="btn btn-primary">
+                    <span>Scopri i Servizi</span>
+                    <i data-lucide="arrow-right"></i>
+                </a>
+                <a href="#contatti" class="btn btn-outline">
+                    <span>Prenota Consulenza</span>
+                </a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat">
+                    <span class="stat-number" data-count="30">0</span><span class="stat-suffix">+</span>
+                    <span class="stat-label">Anni di Esperienza</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat">
+                    <span class="stat-number" data-count="2000">0</span><span class="stat-suffix">+</span>
+                    <span class="stat-label">Clienti Assistiti</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat">
+                    <span class="stat-number" data-count="6">0</span>
+                    <span class="stat-label">Macroaree di Competenza</span>
+                </div>
+            </div>
+        </div>
+        <div class="hero-scroll">
+            <span>Scorri</span>
+            <div class="scroll-line"></div>
+        </div>
+    </section>
+
+    <!-- Marquee -->
+    <section class="marquee-section">
+        <div class="marquee">
+            <div class="marquee-track">
+                <span>Consulenza Fiscale</span>
+                <span class="marquee-dot">&#9670;</span>
+                <span>Bilanci &amp; Contabilit&agrave;</span>
+                <span class="marquee-dot">&#9670;</span>
+                <span>Operazioni Straordinarie</span>
+                <span class="marquee-dot">&#9670;</span>
+                <span>Fiscalit&agrave; Internazionale</span>
+                <span class="marquee-dot">&#9670;</span>
+                <span>Contenzioso Tributario</span>
+                <span class="marquee-dot">&#9670;</span>
+                <span>Revisione Contabile</span>
+                <span class="marquee-dot">&#9670;</span>
+                <span>Crisi d'Impresa</span>
+                <span class="marquee-dot">&#9670;</span>
+                <span>Startup &amp; Innovazione</span>
+                <span class="marquee-dot">&#9670;</span>
+                <!-- Duplicate for seamless loop -->
+                <span>Consulenza Fiscale</span>
+                <span class="marquee-dot">&#9670;</span>
+                <span>Bilanci &amp; Contabilit&agrave;</span>
+                <span class="marquee-dot">&#9670;</span>
+                <span>Operazioni Straordinarie</span>
+                <span class="marquee-dot">&#9670;</span>
+                <span>Fiscalit&agrave; Internazionale</span>
+                <span class="marquee-dot">&#9670;</span>
+                <span>Contenzioso Tributario</span>
+                <span class="marquee-dot">&#9670;</span>
+                <span>Revisione Contabile</span>
+                <span class="marquee-dot">&#9670;</span>
+                <span>Crisi d'Impresa</span>
+                <span class="marquee-dot">&#9670;</span>
+                <span>Startup &amp; Innovazione</span>
+                <span class="marquee-dot">&#9670;</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Chi Siamo -->
+    <section class="section about" id="chi-siamo">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Chi Siamo</span>
+                <h2 class="section-title">
+                    Eccellenza Professionale<br>
+                    <em>dal Cuore della Sicilia</em>
+                </h2>
+            </div>
+            <div class="about-grid">
+                <div class="about-text">
+                    <p class="about-lead">
+                        Lo Studio Associato <strong>Il Tuo Commercialista</strong> nasce dall'unione delle competenze
+                        e dell'esperienza pluridecennale dei Dottori Commercialisti Giuseppe Antonio Marotta e Antonio Balsamo.
+                    </p>
+                    <p>
+                        Con sedi operative ad <strong>Agrigento</strong> e <strong>Caltanissetta</strong>, offriamo un servizio
+                        di consulenza completo e personalizzato a imprese, professionisti, enti e privati in tutta Italia e all'estero.
+                    </p>
+                    <p>
+                        Il nostro approccio coniuga rigore tecnico e visione strategica, garantendo soluzioni su misura
+                        per ogni esigenza fiscale, contabile e aziendale. Crediamo in un rapporto di fiducia
+                        costruito sulla trasparenza, la competenza e la disponibilit&agrave;.
+                    </p>
+                    <div class="about-values">
+                        <div class="value">
+                            <div class="value-icon"><i data-lucide="shield-check"></i></div>
+                            <div>
+                                <h4>Affidabilit&agrave;</h4>
+                                <p>Rigore professionale e rispetto degli impegni</p>
+                            </div>
+                        </div>
+                        <div class="value">
+                            <div class="value-icon"><i data-lucide="lightbulb"></i></div>
+                            <div>
+                                <h4>Innovazione</h4>
+                                <p>Aggiornamento costante e soluzioni digitali</p>
+                            </div>
+                        </div>
+                        <div class="value">
+                            <div class="value-icon"><i data-lucide="users"></i></div>
+                            <div>
+                                <h4>Vicinanza</h4>
+                                <p>Ascolto attento e rapporto personale</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-visual">
+                    <div class="about-image-placeholder" id="about-image">
+                        <img src="FOTO%20DELLO%20STUDIO%20(About%20Section).png" alt="Studio Il Tuo Commercialista" loading="lazy">
+                    </div>
+                    <div class="about-floating-card">
+                        <div class="floating-number">30+</div>
+                        <div class="floating-text">Anni di esperienza<br>al vostro servizio</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Servizi Section -->
+    <section class="section services" id="servizi">
+        <div class="container">
+            <div class="section-header center">
+                <span class="section-tag">I Nostri Servizi</span>
+                <h2 class="section-title">
+                    Soluzioni Complete per<br>
+                    <em>Ogni Esigenza Professionale</em>
+                </h2>
+                <p class="section-desc">
+                    Offriamo una gamma completa di servizi di consulenza fiscale, tributaria, contabile e aziendale.
+                    Ogni area &egrave; presidiata da professionisti specializzati.
+                </p>
+            </div>
+
+            <!-- Services Grid -->
+            <div class="services-grid">
+
+                <!-- 1. Consulenza Fiscale, Tributaria e Internazionale -->
+                <div class="service-card" data-service="fiscale">
+                    <div class="service-card-inner">
+                        <div class="service-icon">
+                            <i data-lucide="calculator"></i>
+                        </div>
+                        <div class="service-number">01</div>
+                        <h3 class="service-title">Consulenza Fiscale, Tributaria e Internazionale</h3>
+                        <p class="service-excerpt">
+                            Pianificazione fiscale nazionale e internazionale, dichiarazioni dei redditi, IVA,
+                            contenzioso tributario, transfer pricing e fiscalit&agrave; cross-border.
+                        </p>
+                        <ul class="service-list">
+                            <li>Dichiarazioni dei redditi (730, Modello Redditi PF/SP/SC/ENC), IVA e LIPE</li>
+                            <li>Tax planning, crediti d'imposta (R&amp;S, Transizione 4.0/5.0) e agevolazioni</li>
+                            <li>Fiscalit&agrave; internazionale: transfer pricing, CFC, stabile organizzazione</li>
+                            <li>Convenzioni contro le doppie imposizioni, Quadro RW, IVIE e IVAFE</li>
+                            <li>Contenzioso tributario: ricorsi, accertamento con adesione, autotutela</li>
+                            <li>Assistenza in verifiche fiscali (GdF e Agenzia delle Entrate)</li>
+                            <li>Interpelli, mediazione, conciliazione e rappresentanza in giudizio</li>
+                            <li>Fatturazione elettronica, corrispettivi telematici, ravvedimenti operosi</li>
+                        </ul>
+                        <button class="service-toggle">
+                            <span>Dettagli</span>
+                            <i data-lucide="plus"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- 2. Contabilità, Bilanci e Revisione -->
+                <div class="service-card" data-service="contabilita">
+                    <div class="service-card-inner">
+                        <div class="service-icon">
+                            <i data-lucide="book-open"></i>
+                        </div>
+                        <div class="service-number">02</div>
+                        <h3 class="service-title">Contabilit&agrave;, Bilanci e Revisione</h3>
+                        <p class="service-excerpt">
+                            Tenuta della contabilit&agrave;, bilanci d'esercizio e consolidati, revisione legale dei conti,
+                            collegio sindacale, audit e adeguati assetti organizzativi.
+                        </p>
+                        <ul class="service-list">
+                            <li>Contabilit&agrave; ordinaria, semplificata, per professionisti e forfetari</li>
+                            <li>Bilancio d'esercizio, consolidato, infrannuale e ESG reporting</li>
+                            <li>Analisi di bilancio per indici e flussi, deposito alla CCIAA</li>
+                            <li>Revisione legale dei conti ai sensi del D.Lgs. 39/2010</li>
+                            <li>Sindaco unico o membro del collegio sindacale</li>
+                            <li>Organismo di Vigilanza ex D.Lgs. 231/2001</li>
+                            <li>Audit interni, verifica continuit&agrave; aziendale (going concern)</li>
+                            <li>Adeguati assetti organizzativi, amministrativi e contabili</li>
+                        </ul>
+                        <button class="service-toggle">
+                            <span>Dettagli</span>
+                            <i data-lucide="plus"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- 3. Consulenza Societaria e Operazioni Straordinarie -->
+                <div class="service-card" data-service="societaria">
+                    <div class="service-card-inner">
+                        <div class="service-icon">
+                            <i data-lucide="git-merge"></i>
+                        </div>
+                        <div class="service-number">03</div>
+                        <h3 class="service-title">Consulenza Societaria e Operazioni Straordinarie</h3>
+                        <p class="service-excerpt">
+                            Costituzione e gestione societ&agrave;, fusioni, scissioni, trasformazioni, M&amp;A,
+                            startup innovative, business plan e raccolta capitali.
+                        </p>
+                        <ul class="service-list">
+                            <li>Costituzione SRL, SPA, SAS, SNC, Cooperative, startup e PMI innovative</li>
+                            <li>Redazione statuti, patti parasociali, contrattualistica commerciale</li>
+                            <li>Fusioni, scissioni, trasformazioni omogenee ed eterogenee</li>
+                            <li>Conferimenti, cessioni e acquisizioni d'azienda (M&amp;A), due diligence</li>
+                            <li>Valutazione d'azienda, perizie di stima, LBO e MBO</li>
+                            <li>Business plan, finanziamenti agevolati (Smart&amp;Start, Resto al Sud)</li>
+                            <li>Equity crowdfunding, work for equity e stock option plan</li>
+                            <li>Assemblee, verbali, aumenti di capitale, distribuzione dividendi</li>
+                        </ul>
+                        <button class="service-toggle">
+                            <span>Dettagli</span>
+                            <i data-lucide="plus"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- 4. Consulenza Aziendale, Lavoro e Patrimonio -->
+                <div class="service-card" data-service="aziendale">
+                    <div class="service-card-inner">
+                        <div class="service-icon">
+                            <i data-lucide="bar-chart-3"></i>
+                        </div>
+                        <div class="service-number">04</div>
+                        <h3 class="service-title">Consulenza Aziendale, Lavoro e Patrimonio</h3>
+                        <p class="service-excerpt">
+                            Controllo di gestione, buste paga, pianificazione finanziaria, successioni,
+                            passaggio generazionale, trust e protezione patrimoniale.
+                        </p>
+                        <ul class="service-list">
+                            <li>Controllo di gestione, budget, KPI e cash flow forecasting</li>
+                            <li>Rapporti bancari, Centrale Rischi, finanza agevolata e bandi</li>
+                            <li>Elaborazione buste paga, gestione del personale, CCNL e welfare</li>
+                            <li>Contributi INPS/INAIL, TFR, ammortizzatori sociali, vertenze</li>
+                            <li>Successioni, volture catastali, donazioni e imposte di registro</li>
+                            <li>Passaggio generazionale, patto di famiglia, family buy-out</li>
+                            <li>Trust, holding familiari, fondo patrimoniale, protezione patrimoniale</li>
+                            <li>Consulenza per professionisti, immobiliare, agricoltura e sanitario</li>
+                        </ul>
+                        <button class="service-toggle">
+                            <span>Dettagli</span>
+                            <i data-lucide="plus"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- 5. Crisi d'Impresa e Attività Giudiziaria -->
+                <div class="service-card" data-service="crisi">
+                    <div class="service-card-inner">
+                        <div class="service-icon">
+                            <i data-lucide="scale"></i>
+                        </div>
+                        <div class="service-number">05</div>
+                        <h3 class="service-title">Crisi d'Impresa e Attivit&agrave; Giudiziaria</h3>
+                        <p class="service-excerpt">
+                            Prevenzione e gestione della crisi, procedure concorsuali, sovraindebitamento,
+                            perizie giurate, CTU/CTP, arbitrato e mediazione.
+                        </p>
+                        <ul class="service-list">
+                            <li>Composizione negoziata della crisi e piani di risanamento</li>
+                            <li>Concordato preventivo, accordi di ristrutturazione, transazione fiscale</li>
+                            <li>Sovraindebitamento, liquidazione controllata, esdebitazione</li>
+                            <li>Incarichi di curatore, commissario giudiziale, attestatore</li>
+                            <li>Perizie di stima giurate e non giurate, valutazioni e rivalutazioni</li>
+                            <li>CTU presso i Tribunali e CTP (assistenza tecnica di parte)</li>
+                            <li>Arbitrato societario e commerciale, mediazione civile</li>
+                            <li>Quantificazione danni patrimoniali e perizie assicurative</li>
+                        </ul>
+                        <button class="service-toggle">
+                            <span>Dettagli</span>
+                            <i data-lucide="plus"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- 6. Terzo Settore, Sport e Compliance -->
+                <div class="service-card" data-service="nonprofit">
+                    <div class="service-card-inner">
+                        <div class="service-icon">
+                            <i data-lucide="heart-handshake"></i>
+                        </div>
+                        <div class="service-number">06</div>
+                        <h3 class="service-title">Terzo Settore, Sport e Compliance</h3>
+                        <p class="service-excerpt">
+                            Enti non profit, associazioni sportive, antiriciclaggio, GDPR,
+                            modelli organizzativi 231, servizi digitali e e-commerce.
+                        </p>
+                        <ul class="service-list">
+                            <li>Costituzione e gestione ETS, APS, ODV, fondazioni e iscrizione RUNTS</li>
+                            <li>Costituzione ASD/SSD, Riforma dello Sport, regime L. 398/91</li>
+                            <li>5 per mille, raccolta fondi, gestione lavoratori sportivi</li>
+                            <li>Antiriciclaggio, adeguata verifica e segnalazione operazioni sospette</li>
+                            <li>Adeguamento GDPR, DPO, Modello Organizzativo 231</li>
+                            <li>Fatturazione elettronica, PEC, firma digitale, SPID</li>
+                            <li>Consulenza e-commerce, regime OSS/IOSS, adempimenti doganali</li>
+                            <li>Domiciliazione legale e fiscale, conservazione sostitutiva a norma</li>
+                        </ul>
+                        <button class="service-toggle">
+                            <span>Dettagli</span>
+                            <i data-lucide="plus"></i>
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Professionisti Section -->
+    <section class="section professionals" id="professionisti">
+        <div class="container">
+            <div class="section-header center">
+                <span class="section-tag">I Professionisti</span>
+                <h2 class="section-title">
+                    Competenza e Dedizione<br>
+                    <em>al Vostro Servizio</em>
+                </h2>
+            </div>
+            <div class="professionals-grid">
+                <!-- Dott. Marotta -->
+                <div class="professional-card">
+                    <div class="professional-image">
+                        <img src="Marotta.png" alt="Dott. Giuseppe Antonio Marotta" loading="lazy">
+                    </div>
+                    <div class="professional-info">
+                        <h3 class="professional-name">Dott. Giuseppe Antonio Marotta</h3>
+                        <span class="professional-role">Dottore Commercialista &amp; Revisore Contabile</span>
+                        <div class="professional-details">
+                            <div class="detail">
+                                <i data-lucide="map-pin"></i>
+                                <div>
+                                    <strong>Studio</strong>
+                                    <p>Via San Vito, 2 - 92100 Agrigento (AG)</p>
+                                </div>
+                            </div>
+                            <div class="detail">
+                                <i data-lucide="mail"></i>
+                                <div>
+                                    <strong>E-mail</strong>
+                                    <p><a href="mailto:dott.gmarotta@gmail.com">dott.gmarotta@gmail.com</a></p>
+                                </div>
+                            </div>
+                            <div class="detail">
+                                <i data-lucide="at-sign"></i>
+                                <div>
+                                    <strong>PEC</strong>
+                                    <p><a href="mailto:dott.gmarotta@pec.it">dott.gmarotta@pec.it</a></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="professional-expertise">
+                            <span class="expertise-tag">Consulenza Fiscale</span>
+                            <span class="expertise-tag">Operazioni Straordinarie</span>
+                            <span class="expertise-tag">Contenzioso Tributario</span>
+                            <span class="expertise-tag">Revisione Contabile</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Dott. Balsamo -->
+                <div class="professional-card">
+                    <div class="professional-image">
+                        <img src="Balsamo.png" alt="Dott. Antonio Balsamo" loading="lazy">
+                    </div>
+                    <div class="professional-info">
+                        <h3 class="professional-name">Dott. Antonio Balsamo</h3>
+                        <span class="professional-role">Dottore Commercialista &amp; Revisore Contabile</span>
+                        <div class="professional-details">
+                            <div class="detail">
+                                <i data-lucide="map-pin"></i>
+                                <div>
+                                    <strong>Studio</strong>
+                                    <p>Via J. F. Kennedy n. 21 - 93100 Caltanissetta (CL)</p>
+                                </div>
+                            </div>
+                            <div class="detail">
+                                <i data-lucide="mail"></i>
+                                <div>
+                                    <strong>E-mail</strong>
+                                    <p><a href="mailto:info@studiobalsamo.com">info@studiobalsamo.com</a></p>
+                                </div>
+                            </div>
+                            <div class="detail">
+                                <i data-lucide="at-sign"></i>
+                                <div>
+                                    <strong>PEC</strong>
+                                    <p><a href="mailto:dott.antonio.balsamo@pec.it">dott.antonio.balsamo@pec.it</a></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="professional-expertise">
+                            <span class="expertise-tag">Consulenza Aziendale</span>
+                            <span class="expertise-tag">Fiscalit&agrave; Internazionale</span>
+                            <span class="expertise-tag">Crisi d'Impresa</span>
+                            <span class="expertise-tag">Startup Innovative</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Novità Fiscali -->
+    <section class="section news" id="novita">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Novit&agrave; Fiscali</span>
+                <h2 class="section-title">
+                    Aggiornamenti e<br>
+                    <em>Ultime Novit&agrave;</em>
+                </h2>
+                <p class="section-desc">
+                    Restiamo sempre aggiornati sulle ultime novit&agrave; fiscali e normative per offrirvi
+                    consulenza tempestiva e informata.
+                </p>
+            </div>
+            <div class="news-grid">
+                <!-- News Card 1 -->
+                <article class="news-card">
+                    <div class="news-category">Agenzia delle Entrate</div>
+                    <div class="news-date">
+                        <i data-lucide="calendar"></i>
+                        <span>In aggiornamento</span>
+                    </div>
+                    <h3 class="news-title">Nuove Scadenze Fiscali 2025-2026</h3>
+                    <p class="news-excerpt">
+                        Calendario aggiornato delle principali scadenze fiscali: dichiarazioni dei redditi,
+                        versamenti IVA, comunicazioni obbligatorie e adempimenti periodici.
+                    </p>
+                    <div class="news-tags">
+                        <span>Scadenze</span>
+                        <span>Dichiarazioni</span>
+                    </div>
+                </article>
+
+                <!-- News Card 2 -->
+                <article class="news-card">
+                    <div class="news-category">Fiscalit&agrave; Internazionale</div>
+                    <div class="news-date">
+                        <i data-lucide="calendar"></i>
+                        <span>In aggiornamento</span>
+                    </div>
+                    <h3 class="news-title">Pillar Two &ndash; Global Minimum Tax</h3>
+                    <p class="news-excerpt">
+                        Novit&agrave; sulla tassazione minima globale al 15% per i gruppi multinazionali.
+                        Impatto per le imprese italiane e adempimenti previsti dalla Direttiva UE.
+                    </p>
+                    <div class="news-tags">
+                        <span>Internazionale</span>
+                        <span>BEPS</span>
+                    </div>
+                </article>
+
+                <!-- News Card 3 -->
+                <article class="news-card">
+                    <div class="news-category">Agevolazioni</div>
+                    <div class="news-date">
+                        <i data-lucide="calendar"></i>
+                        <span>In aggiornamento</span>
+                    </div>
+                    <h3 class="news-title">Crediti d'Imposta Transizione 5.0</h3>
+                    <p class="news-excerpt">
+                        Guida completa ai nuovi crediti d'imposta per investimenti in beni strumentali,
+                        digitalizzazione ed efficienza energetica nell'ambito del Piano Transizione 5.0.
+                    </p>
+                    <div class="news-tags">
+                        <span>Crediti d'Imposta</span>
+                        <span>Innovazione</span>
+                    </div>
+                </article>
+
+                <!-- News Card 4 -->
+                <article class="news-card">
+                    <div class="news-category">Riforma Fiscale</div>
+                    <div class="news-date">
+                        <i data-lucide="calendar"></i>
+                        <span>In aggiornamento</span>
+                    </div>
+                    <h3 class="news-title">Riforma IRPEF e Nuove Aliquote</h3>
+                    <p class="news-excerpt">
+                        Analisi delle modifiche alle aliquote IRPEF e degli effetti sulla tassazione
+                        dei redditi di lavoro dipendente, autonomo e d'impresa.
+                    </p>
+                    <div class="news-tags">
+                        <span>IRPEF</span>
+                        <span>Riforma</span>
+                    </div>
+                </article>
+
+                <!-- News Card 5 -->
+                <article class="news-card">
+                    <div class="news-category">Codice della Crisi</div>
+                    <div class="news-date">
+                        <i data-lucide="calendar"></i>
+                        <span>In aggiornamento</span>
+                    </div>
+                    <h3 class="news-title">Composizione Negoziata: Novit&agrave; e Prassi</h3>
+                    <p class="news-excerpt">
+                        Aggiornamenti sulla composizione negoziata della crisi d'impresa,
+                        primi orientamenti giurisprudenziali e indicazioni operative per le imprese.
+                    </p>
+                    <div class="news-tags">
+                        <span>Crisi d'Impresa</span>
+                        <span>CCII</span>
+                    </div>
+                </article>
+
+                <!-- News Card 6 -->
+                <article class="news-card">
+                    <div class="news-category">Terzo Settore</div>
+                    <div class="news-date">
+                        <i data-lucide="calendar"></i>
+                        <span>In aggiornamento</span>
+                    </div>
+                    <h3 class="news-title">RUNTS e Adempimenti ETS</h3>
+                    <p class="news-excerpt">
+                        Guida agli adempimenti per gli Enti del Terzo Settore: iscrizione al RUNTS,
+                        adeguamento statutario e regime fiscale agevolato.
+                    </p>
+                    <div class="news-tags">
+                        <span>Non Profit</span>
+                        <span>ETS</span>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section cta-section">
+        <div class="cta-bg">
+            <div class="cta-gradient"></div>
+        </div>
+        <div class="container">
+            <div class="cta-content">
+                <h2 class="cta-title">Hai Bisogno di una Consulenza?</h2>
+                <p class="cta-text">
+                    Contattaci senza impegno per una prima analisi della tua situazione fiscale e aziendale.
+                    Il nostro team &egrave; pronto ad assisterti.
+                </p>
+                <a href="#contatti" class="btn btn-primary btn-large">
+                    <span>Contattaci Ora</span>
+                    <i data-lucide="arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contatti Section -->
+    <section class="section contacts" id="contatti">
+        <div class="container">
+            <div class="section-header center">
+                <span class="section-tag">Contatti</span>
+                <h2 class="section-title">
+                    Parliamo del Tuo<br>
+                    <em>Progetto</em>
+                </h2>
+            </div>
+            <div class="contacts-grid">
+                <div class="contact-form-wrapper">
+                    <form action="https://formspree.io/f/xnnljgoa" method="POST" class="contact-form" id="contact-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="nome">Nome *</label>
+                                <input type="text" id="nome" name="nome" required placeholder="Il tuo nome">
+                            </div>
+                            <div class="form-group">
+                                <label for="cognome">Cognome *</label>
+                                <input type="text" id="cognome" name="cognome" required placeholder="Il tuo cognome">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="email">E-mail *</label>
+                                <input type="email" id="email" name="email" required placeholder="La tua e-mail">
+                            </div>
+                            <div class="form-group">
+                                <label for="telefono">Telefono</label>
+                                <input type="tel" id="telefono" name="telefono" placeholder="Il tuo numero">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="servizio">Servizio di Interesse</label>
+                            <select id="servizio" name="servizio">
+                                <option value="">Seleziona un servizio...</option>
+                                <option value="fiscale">Consulenza Fiscale, Tributaria e Internazionale</option>
+                                <option value="contabilita">Contabilit&agrave;, Bilanci e Revisione</option>
+                                <option value="societaria">Consulenza Societaria e Operazioni Straordinarie</option>
+                                <option value="aziendale">Consulenza Aziendale, Lavoro e Patrimonio</option>
+                                <option value="crisi">Crisi d'Impresa e Attivit&agrave; Giudiziaria</option>
+                                <option value="nonprofit">Terzo Settore, Sport e Compliance</option>
+                                <option value="altro">Altro</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="sede">Sede Preferita</label>
+                            <select id="sede" name="sede">
+                                <option value="">Seleziona una sede...</option>
+                                <option value="agrigento">Agrigento - Dott. Marotta</option>
+                                <option value="caltanissetta">Caltanissetta - Dott. Balsamo</option>
+                                <option value="online">Consulenza Online</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="messaggio">Messaggio *</label>
+                            <textarea id="messaggio" name="messaggio" rows="5" required placeholder="Descrivi brevemente la tua esigenza..."></textarea>
+                        </div>
+                        <div class="form-group form-privacy">
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="privacy" required>
+                                <span class="checkmark"></span>
+                                <span>Acconsento al trattamento dei dati personali ai sensi del GDPR (Reg. UE 2016/679) *</span>
+                            </label>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-large btn-submit">
+                            <span>Invia Richiesta</span>
+                            <i data-lucide="send"></i>
+                        </button>
+                    </form>
+                </div>
+                <div class="contact-info">
+                    <div class="info-card">
+                        <div class="info-card-header">
+                            <i data-lucide="map-pin"></i>
+                            <h4>Sede di Agrigento</h4>
+                        </div>
+                        <p><strong>Dott. Giuseppe Antonio Marotta</strong></p>
+                        <p>Via San Vito, 2<br>92100 Agrigento (AG) - Italia</p>
+                        <div class="info-contacts">
+                            <a href="mailto:dott.gmarotta@gmail.com">
+                                <i data-lucide="mail"></i> dott.gmarotta@gmail.com
+                            </a>
+                            <a href="mailto:dott.gmarotta@pec.it">
+                                <i data-lucide="at-sign"></i> dott.gmarotta@pec.it
+                            </a>
+                        </div>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-card-header">
+                            <i data-lucide="map-pin"></i>
+                            <h4>Sede di Caltanissetta</h4>
+                        </div>
+                        <p><strong>Dott. Antonio Balsamo</strong></p>
+                        <p>Via J. F. Kennedy n. 21<br>93100 Caltanissetta (CL) - Italia</p>
+                        <div class="info-contacts">
+                            <a href="mailto:info@studiobalsamo.com">
+                                <i data-lucide="mail"></i> info@studiobalsamo.com
+                            </a>
+                            <a href="mailto:dott.antonio.balsamo@pec.it">
+                                <i data-lucide="at-sign"></i> dott.antonio.balsamo@pec.it
+                            </a>
+                        </div>
+                    </div>
+                    <div class="info-card hours">
+                        <div class="info-card-header">
+                            <i data-lucide="clock"></i>
+                            <h4>Orari di Ricevimento</h4>
+                        </div>
+                        <div class="hours-grid">
+                            <span>Luned&igrave; - Venerd&igrave;</span>
+                            <span>09:00 - 13:00 / 15:00 - 19:00</span>
+                            <span>Sabato</span>
+                            <span>Su appuntamento</span>
+                        </div>
+                        <p class="hours-note">Consulenze online disponibili su richiesta</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <span class="logo-mark">ITC</span>
+                    <span class="footer-brand-name">Il Tuo Commercialista</span>
+                    <p class="footer-tagline">Studio Associato di Consulenza<br>Fiscale, Tributaria e Aziendale</p>
+                </div>
+                <div class="footer-links-grid">
+                    <div class="footer-col">
+                        <h5>I Nostri Servizi</h5>
+                        <a href="#servizi">Fiscale, Tributaria e Internazionale</a>
+                        <a href="#servizi">Contabilit&agrave;, Bilanci e Revisione</a>
+                        <a href="#servizi">Societaria e Operazioni Straordinarie</a>
+                    </div>
+                    <div class="footer-col">
+                        <h5>Altre Aree</h5>
+                        <a href="#servizi">Aziendale, Lavoro e Patrimonio</a>
+                        <a href="#servizi">Crisi d'Impresa e Attivit&agrave; Giudiziaria</a>
+                        <a href="#servizi">Terzo Settore, Sport e Compliance</a>
+                    </div>
+                    <div class="footer-col">
+                        <h5>Studio</h5>
+                        <a href="#chi-siamo">Chi Siamo</a>
+                        <a href="#professionisti">Professionisti</a>
+                        <a href="#novita">Novit&agrave; Fiscali</a>
+                        <a href="#contatti">Contatti</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Il Tuo Commercialista - Studio Associato Marotta &amp; Balsamo. Tutti i diritti riservati.</p>
+                <p>P.IVA: [da inserire] | <a href="#">Privacy Policy</a> | <a href="#">Cookie Policy</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
