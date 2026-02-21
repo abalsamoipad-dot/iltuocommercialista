@@ -1752,7 +1752,7 @@ input, select, textarea {
 
     .about-quote-block {
         min-height: 280px;
-        padding: 48px 36px;
+        padding: 48px 36px 80px;
     }
 
     .about-floating-card {
@@ -1815,6 +1815,16 @@ input, select, textarea {
 
     .hero-scroll {
         display: none;
+    }
+
+    .about-floating-card {
+        bottom: -20px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .quote-attribution {
+        justify-content: center;
     }
 }
 
