@@ -1093,77 +1093,97 @@ input, select, textarea {
 }
 
 .professional-card {
-    background: var(--color-bg-card);
-    border: 1px solid var(--color-border);
-    border-radius: var(--radius-lg);
-    overflow: hidden;
-    transition: all var(--transition-normal);
+    position: relative;
+    padding-top: 100px;
 }
 
-.professional-card:hover {
-    border-color: var(--color-border-hover);
-    box-shadow: var(--shadow-md);
-}
-
-.professional-image {
-    width: 100%;
-    aspect-ratio: 1/1;
-    background: linear-gradient(135deg, var(--color-surface), var(--color-bg-alt));
+.professional-monogram-wrapper {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    width: 200px;
+    height: 200px;
     display: flex;
     align-items: center;
     justify-content: center;
-    overflow: hidden;
-}
-
-.professional-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center 15%;
-}
-
-.professional-image .placeholder-content svg {
-    width: 64px;
-    height: 64px;
 }
 
 .professional-monogram {
-    width: 160px;
-    height: 160px;
+    width: 200px;
+    height: 200px;
     border-radius: 50%;
-    background: linear-gradient(135deg, var(--color-accent), #8B6914);
+    background: linear-gradient(180deg, var(--color-accent) 0%, #8B6914 60%, rgba(139, 105, 20, 0.3) 100%);
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
+    box-shadow:
+        0 0 40px rgba(201, 169, 110, 0.2),
+        0 0 80px rgba(201, 169, 110, 0.08);
 }
 
 .professional-monogram::before {
     content: '';
     position: absolute;
-    inset: 3px;
+    inset: 4px;
     border-radius: 50%;
-    background: var(--color-bg);
+    background: linear-gradient(180deg, var(--color-bg-card) 0%, #1a1a1a 100%);
+}
+
+.professional-monogram::after {
+    content: '';
+    position: absolute;
+    inset: -8px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(201, 169, 110, 0.15) 0%, transparent 70%);
+    z-index: -1;
 }
 
 .professional-monogram span {
     position: relative;
     z-index: 1;
     font-family: 'Playfair Display', serif;
-    font-size: 2.8rem;
+    font-size: 3.2rem;
     font-weight: 600;
     color: var(--color-accent);
-    letter-spacing: 0.05em;
+    letter-spacing: 0.08em;
+    text-shadow: 0 2px 12px rgba(201, 169, 110, 0.3);
 }
 
 .professional-info {
-    padding: 32px;
+    background: var(--color-bg-card);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    padding: 130px 40px 40px;
+    position: relative;
+    overflow: hidden;
+    transition: all var(--transition-normal);
+}
+
+.professional-info::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 240px;
+    height: 100px;
+    background: radial-gradient(ellipse at center top, rgba(201, 169, 110, 0.08) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+.professional-info:hover {
+    border-color: var(--color-border-hover);
+    box-shadow: var(--shadow-md);
 }
 
 .professional-name {
     font-size: 1.4rem;
     font-weight: 700;
     margin-bottom: 8px;
+    text-align: center;
 }
 
 .professional-role {
@@ -1172,14 +1192,15 @@ input, select, textarea {
     font-weight: 500;
     letter-spacing: 0.05em;
     display: block;
-    margin-bottom: 24px;
+    margin-bottom: 28px;
+    text-align: center;
 }
 
 .professional-details {
     display: flex;
     flex-direction: column;
     gap: 16px;
-    margin-bottom: 24px;
+    margin-bottom: 28px;
 }
 
 .detail {
@@ -1223,6 +1244,7 @@ input, select, textarea {
     display: flex;
     flex-wrap: wrap;
     gap: 8px;
+    justify-content: center;
 }
 
 .expertise-tag {
@@ -1775,7 +1797,25 @@ input, select, textarea {
     }
 
     .professional-info {
-        padding: 20px;
+        padding: 110px 20px 24px;
+    }
+
+    .professional-monogram-wrapper {
+        width: 160px;
+        height: 160px;
+    }
+
+    .professional-monogram {
+        width: 160px;
+        height: 160px;
+    }
+
+    .professional-monogram span {
+        font-size: 2.6rem;
+    }
+
+    .professional-card {
+        padding-top: 80px;
     }
 
     .service-card-inner {
