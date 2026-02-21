@@ -1818,13 +1818,20 @@ input, select, textarea {
     }
 
     .about-floating-card {
-        bottom: -20px;
-        left: 50%;
-        transform: translateX(-50%);
+        position: relative;
+        bottom: auto;
+        left: auto;
+        margin: 24px auto 0;
+        display: inline-block;
+    }
+
+    .about-visual {
+        text-align: center;
     }
 
     .quote-attribution {
         justify-content: center;
+        margin-bottom: 8px;
     }
 }
 
