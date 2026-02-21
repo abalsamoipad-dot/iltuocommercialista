@@ -1560,6 +1560,13 @@ input, select, textarea {
     margin-bottom: 8px;
 }
 
+.by-appointment {
+    font-size: 0.8rem;
+    font-style: italic;
+    color: var(--color-accent);
+    margin-top: -4px;
+}
+
 .info-contacts {
     display: flex;
     flex-direction: column;
@@ -1818,20 +1825,17 @@ input, select, textarea {
     }
 
     .about-floating-card {
-        position: relative;
-        bottom: auto;
-        left: auto;
-        margin: 24px auto 0;
-        display: inline-block;
-    }
-
-    .about-visual {
-        text-align: center;
+        bottom: -24px;
+        left: -10px;
     }
 
     .quote-attribution {
-        justify-content: center;
-        margin-bottom: 8px;
+        justify-content: flex-end;
+        padding-right: 10px;
+    }
+
+    .about-quote-block {
+        padding: 40px 28px 90px;
     }
 }
 
