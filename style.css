@@ -883,42 +883,58 @@ input, select, textarea {
     position: relative;
 }
 
-.about-image-placeholder {
+.about-quote-block {
     width: 100%;
-    aspect-ratio: 4/5;
+    padding: 60px 48px;
     background: linear-gradient(135deg, var(--color-bg-card), var(--color-surface));
     border-radius: var(--radius-lg);
-    overflow: hidden;
     border: 1px solid var(--color-border);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.about-image-placeholder img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center center;
-}
-
-.placeholder-content {
+    position: relative;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    min-height: 360px;
+}
+
+.quote-mark {
+    font-family: 'Playfair Display', serif;
+    font-size: 8rem;
+    line-height: 0.6;
+    color: var(--color-accent);
+    opacity: 0.2;
+    position: absolute;
+    top: 32px;
+    left: 40px;
+    pointer-events: none;
+}
+
+.about-quote {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.65rem;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 1.6;
+    color: var(--color-text);
+    position: relative;
+    z-index: 1;
+}
+
+.quote-attribution {
+    display: flex;
     align-items: center;
-    gap: 12px;
-    color: var(--color-text-tertiary);
-}
-
-.placeholder-content svg {
-    width: 48px;
-    height: 48px;
-    opacity: 0.3;
-}
-
-.placeholder-content span {
+    gap: 16px;
+    margin-top: 32px;
     font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--color-accent);
     letter-spacing: 0.05em;
+}
+
+.quote-line {
+    width: 40px;
+    height: 1px;
+    background: var(--color-accent);
+    display: block;
 }
 
 .about-floating-card {
@@ -1724,8 +1740,9 @@ input, select, textarea {
         order: -1;
     }
 
-    .about-image-placeholder {
-        aspect-ratio: 16/9;
+    .about-quote-block {
+        min-height: 280px;
+        padding: 48px 36px;
     }
 
     .about-floating-card {
