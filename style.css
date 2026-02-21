@@ -1127,6 +1127,35 @@ input, select, textarea {
     height: 64px;
 }
 
+.professional-monogram {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--color-accent), #8B6914);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.professional-monogram::before {
+    content: '';
+    position: absolute;
+    inset: 3px;
+    border-radius: 50%;
+    background: var(--color-bg);
+}
+
+.professional-monogram span {
+    position: relative;
+    z-index: 1;
+    font-family: 'Playfair Display', serif;
+    font-size: 2.8rem;
+    font-weight: 600;
+    color: var(--color-accent);
+    letter-spacing: 0.05em;
+}
+
 .professional-info {
     padding: 32px;
 }
