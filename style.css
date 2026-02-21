@@ -576,7 +576,7 @@ input, select, textarea {
 
 .hero-stats {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     gap: 40px;
     opacity: 0;
     transform: translateY(20px);
