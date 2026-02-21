@@ -253,10 +253,11 @@ input, select, textarea {
 }
 
 .logo-mark {
-    font-size: 1.5rem;
-    font-weight: 900;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.6rem;
+    font-weight: 700;
     color: var(--color-accent);
-    letter-spacing: 0.1em;
+    letter-spacing: 0.15em;
     background: linear-gradient(135deg, var(--color-accent), var(--color-accent-light));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -928,6 +929,7 @@ input, select, textarea {
     font-weight: 500;
     color: var(--color-accent);
     letter-spacing: 0.05em;
+    justify-content: flex-end;
 }
 
 .quote-line {
@@ -940,7 +942,7 @@ input, select, textarea {
 .about-floating-card {
     position: absolute;
     bottom: -30px;
-    right: 32px;
+    left: -30px;
     background: var(--color-accent);
     color: var(--color-bg);
     padding: 24px 28px;
@@ -1161,11 +1163,11 @@ input, select, textarea {
 .professional-monogram span {
     position: relative;
     z-index: 1;
-    font-family: 'Playfair Display', serif;
-    font-size: 3.2rem;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 3.4rem;
     font-weight: 600;
     color: var(--color-accent);
-    letter-spacing: 0.08em;
+    letter-spacing: 0.12em;
     text-shadow: 0 2px 12px rgba(201, 169, 110, 0.3);
 }
 
@@ -1748,7 +1750,7 @@ input, select, textarea {
 
     .about-floating-card {
         bottom: -20px;
-        right: 20px;
+        left: 20px;
     }
 
     .professionals-grid {
