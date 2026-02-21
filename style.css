@@ -939,13 +939,14 @@ input, select, textarea {
 
 .about-floating-card {
     position: absolute;
-    bottom: -20px;
-    left: -40px;
+    bottom: -30px;
+    right: 32px;
     background: var(--color-accent);
     color: var(--color-bg);
-    padding: 28px 32px;
+    padding: 24px 28px;
     border-radius: var(--radius-lg);
     box-shadow: var(--shadow-lg);
+    z-index: 2;
 }
 
 .floating-number {
@@ -1746,8 +1747,8 @@ input, select, textarea {
     }
 
     .about-floating-card {
-        bottom: -15px;
-        left: 20px;
+        bottom: -20px;
+        right: 20px;
     }
 
     .professionals-grid {
