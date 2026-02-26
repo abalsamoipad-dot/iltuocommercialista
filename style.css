@@ -1319,6 +1319,17 @@ input, select, textarea {
     color: var(--color-accent);
 }
 
+.professionals-disclaimer {
+    font-size: 0.78rem;
+    color: var(--color-text-tertiary);
+    text-align: center;
+    margin-top: 40px;
+    line-height: 1.6;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 /* ============================================
    NEWS SECTION
    ============================================ */
@@ -1719,9 +1730,29 @@ input, select, textarea {
     color: var(--color-accent);
 }
 
+.legal-disclaimer {
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+    padding: 20px 0;
+    margin-bottom: 8px;
+}
+
+.legal-disclaimer p {
+    font-size: 0.72rem;
+    color: var(--color-text-tertiary);
+    line-height: 1.7;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.legal-disclaimer strong {
+    color: var(--color-text-secondary);
+}
+
 .footer-bottom {
     padding-top: 24px;
     text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
 }
 
 .footer-bottom p {

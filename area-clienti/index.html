@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Area Clienti | Il Tuo Commercialista</title>
-    <meta name="description" content="Area Clienti - Studio Associato Marotta & Balsamo">
+    <meta name="description" content="Area Clienti - Network Professionale Marotta & Balsamo">
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -45,6 +45,18 @@
 
             <!-- Login Form -->
             <form class="login-form" id="loginForm" onsubmit="handleLogin(event)">
+                <div class="form-group">
+                    <label class="form-label" for="studio">Seleziona lo studio</label>
+                    <div class="input-with-icon">
+                        <i data-lucide="building-2" class="input-icon" style="width:18px;height:18px;"></i>
+                        <select id="studio" class="form-input form-select" required>
+                            <option value="" disabled selected>Scegli il professionista...</option>
+                            <option value="balsamo">Dott. A. Balsamo &mdash; Caltanissetta / Firenze</option>
+                            <option value="marotta">Dott. G.A. Marotta &mdash; Agrigento</option>
+                        </select>
+                    </div>
+                </div>
+
                 <div class="form-group">
                     <label class="form-label" for="email">Email</label>
                     <div class="input-with-icon">
@@ -133,7 +145,7 @@
             </div>
 
             <div class="login-studio">
-                Studio Associato Marotta & Balsamo
+                Network Professionale Marotta & Balsamo
             </div>
         </div>
     </div>
