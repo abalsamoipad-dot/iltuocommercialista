@@ -212,6 +212,24 @@ img {
     font-size: 0.8rem;
 }
 
+.client-type-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    border: 1px solid var(--color-border);
+    background: transparent;
+    color: var(--color-text-secondary);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+
+.client-type-btn.active {
+    border-color: var(--color-accent);
+    background: rgba(201, 169, 110, 0.1);
+    color: var(--color-accent);
+}
+
 .btn-lg {
     padding: 16px 32px;
     font-size: 1rem;
@@ -396,6 +414,25 @@ img {
 }
 
 .badge-error {
+    background: var(--color-error-bg);
+    color: var(--color-error);
+}
+
+.btn-delete-file {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    border: none;
+    background: transparent;
+    color: var(--color-text-tertiary);
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+
+.btn-delete-file:hover {
     background: var(--color-error-bg);
     color: var(--color-error);
 }

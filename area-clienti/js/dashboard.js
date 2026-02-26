@@ -15,8 +15,9 @@ const Dashboard = {
         if (!session) return;
 
         // Popola UI con dati utente
-        document.getElementById('userName').textContent = `${session.nome} ${session.cognome}`;
-        document.getElementById('userNameMobile').textContent = `${session.nome} ${session.cognome}`;
+        const displayName = session.nome ? `${session.nome} ${session.cognome}` : session.cognome;
+        document.getElementById('userName').textContent = displayName;
+        document.getElementById('userNameMobile').textContent = displayName;
 
         // Renderizza categorie
         this.renderCategories();
@@ -388,7 +389,14 @@ const Dashboard = {
                     </div>
                 </td>
                 <td><span class="badge badge-neutral">${categoryLabels[upload.category] || upload.category}</span></td>
-                <td><span class="badge badge-success">Caricato</span></td>
+                <td>
+                    <div class="flex gap-8" style="align-items:center;">
+                        <span class="badge badge-success">Caricato</span>
+                        <button class="btn-delete-file" onclick="Dashboard.deleteFile('${upload.fileId}', '${(upload.originalName || upload.fileName).replace(/'/g, "\\'")}')" title="Elimina file">
+                            <i data-lucide="trash-2" style="width:14px;height:14px;"></i>
+                        </button>
+                    </div>
+                </td>
             </tr>
         `).join('');
 
@@ -402,6 +410,28 @@ const Dashboard = {
             const el = document.getElementById(`count-${cat.id}`);
             if (el) el.textContent = `${count} file`;
         });
+    },
+
+    // Elimina file (sposta in cartella cancellati)
+    async deleteFile(fileId, fileName) {
+        if (!confirm(`Sei sicuro di voler eliminare "${fileName}"?\nIl file verrà spostato nella cartella "Cancellati dal cliente".`)) {
+            return;
+        }
+
+        const session = Auth.getSession();
+        if (!session) return;
+
+        const result = await apiCall('clientDeleteFile', {
+            token: session.token,
+            fileId: fileId
+        });
+
+        if (result.success) {
+            Toast.success('File eliminato');
+            this.loadHistory();
+        } else {
+            Toast.error(result.error || 'Errore nell\'eliminazione');
+        }
     },
 
     // Filtra storico per categoria

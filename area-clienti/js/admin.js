@@ -8,6 +8,7 @@ const Admin = {
     uploadLogs: [],
     currentView: 'clients',
     editingClient: null,
+    clientType: 'persona',
 
     // Inizializzazione
     init() {
@@ -179,6 +180,27 @@ const Admin = {
         lucide.createIcons({ nodes: [tbody] });
     },
 
+    // Toggle tipo cliente (persona / denominazione)
+    setClientType(type) {
+        this.clientType = type;
+        const btnPersona = document.getElementById('btnTypePersona');
+        const btnDenom = document.getElementById('btnTypeDenom');
+        const fieldsPersona = document.getElementById('clientFieldsPersona');
+        const fieldsDenom = document.getElementById('clientFieldsDenom');
+
+        if (type === 'denominazione') {
+            btnPersona.classList.remove('active');
+            btnDenom.classList.add('active');
+            fieldsPersona.classList.add('hidden');
+            fieldsDenom.classList.remove('hidden');
+        } else {
+            btnPersona.classList.add('active');
+            btnDenom.classList.remove('active');
+            fieldsPersona.classList.remove('hidden');
+            fieldsDenom.classList.add('hidden');
+        }
+    },
+
     // Mostra modale nuovo cliente
     showAddClientModal() {
         this.editingClient = null;
@@ -188,6 +210,8 @@ const Admin = {
         document.getElementById('clientPasswordGroup').classList.remove('hidden');
         document.getElementById('clientPassword').required = true;
         document.getElementById('clientError').classList.add('hidden');
+        this.setClientType('persona');
+        document.getElementById('clientDenominazione').value = '';
         document.getElementById('clientModal').classList.add('active');
     },
 
@@ -198,8 +222,20 @@ const Admin = {
 
         this.editingClient = email;
         document.getElementById('clientModalTitle').textContent = 'Modifica Cliente';
-        document.getElementById('clientNome').value = client.nome;
-        document.getElementById('clientCognome').value = client.cognome;
+
+        // Determina se e' persona o denominazione
+        if (client.nome && client.nome.trim()) {
+            this.setClientType('persona');
+            document.getElementById('clientNome').value = client.nome;
+            document.getElementById('clientCognome').value = client.cognome;
+            document.getElementById('clientDenominazione').value = '';
+        } else {
+            this.setClientType('denominazione');
+            document.getElementById('clientDenominazione').value = client.cognome;
+            document.getElementById('clientNome').value = '';
+            document.getElementById('clientCognome').value = '';
+        }
+
         document.getElementById('clientEmail').value = client.email;
         document.getElementById('clientEmail').disabled = false;
         document.getElementById('clientTelefono').value = client.telefono || '';
@@ -220,12 +256,19 @@ const Admin = {
         e.preventDefault();
 
         const data = {
-            nome: document.getElementById('clientNome').value.trim(),
-            cognome: document.getElementById('clientCognome').value.trim(),
             email: document.getElementById('clientEmail').value.trim(),
             telefono: document.getElementById('clientTelefono').value.trim(),
             password: document.getElementById('clientPassword').value
         };
+
+        if (this.clientType === 'denominazione') {
+            data.denominazione = document.getElementById('clientDenominazione').value.trim();
+            data.nome = '';
+            data.cognome = data.denominazione;
+        } else {
+            data.nome = document.getElementById('clientNome').value.trim();
+            data.cognome = document.getElementById('clientCognome').value.trim();
+        }
 
         const errorEl = document.getElementById('clientError');
         const errorText = document.getElementById('clientErrorText');
