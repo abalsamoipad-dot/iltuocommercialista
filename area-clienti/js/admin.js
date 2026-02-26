@@ -91,8 +91,28 @@ const Admin = {
         if (result.success) {
             this.clients = result.clients || [];
             this.renderClients();
+            this.populateLogClientFilter();
             this.updateStats();
         }
+    },
+
+    populateLogClientFilter() {
+        const select = document.getElementById('logClientFilter');
+        if (!select) return;
+        const currentVal = select.value;
+        select.innerHTML = '<option value="">Tutti i clienti</option>';
+        const sorted = [...this.clients].sort((a, b) => {
+            const nameA = (a.cognome + ' ' + a.nome).toLowerCase();
+            const nameB = (b.cognome + ' ' + b.nome).toLowerCase();
+            return nameA.localeCompare(nameB);
+        });
+        sorted.forEach(c => {
+            const opt = document.createElement('option');
+            opt.value = c.email;
+            opt.textContent = c.cognome + ' ' + c.nome;
+            select.appendChild(opt);
+        });
+        if (currentVal) select.value = currentVal;
     },
 
     renderClients() {
