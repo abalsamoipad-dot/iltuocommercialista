@@ -1,0 +1,11 @@
+Caratteri tipografici auto-ospitati (nessuna richiesta verso server esterni).
+
+- Instrument Serif (regolare e corsivo) — Copyright 2022 The Instrument Serif Project Authors
+  (https://github.com/Instrument/instrument-serif)
+- Geist e Geist Mono (variabili) — Copyright 2023 Vercel, in collaborazione con basement.studio
+  (https://github.com/vercel/geist-font)
+
+Tutti distribuiti con la SIL Open Font License, Version 1.1 (https://openfontlicense.org),
+che ne consente l'uso e la redistribuzione, anche in forma incorporata in siti web, purché
+accompagnati dalla presente nota e non venduti separatamente. Sottoinsieme "latin" scaricato
+da Google Fonts (fonts.gstatic.com) il 26 settembre 2026.
